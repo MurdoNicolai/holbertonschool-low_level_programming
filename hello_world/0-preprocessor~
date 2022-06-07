@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#outputs the result of a c file going through the preprocessor 
+ gcc -E -o c
