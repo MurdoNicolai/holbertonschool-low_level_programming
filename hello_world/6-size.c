@@ -27,12 +27,11 @@ int floatLenght = sizeof(floatType);
 
 /*printing*/
 
-printf(
-"Size of a char: %d byte(s)\n"
-"Size of an int: %d byte(s)\n"
-"Size of a long int: %d byte(s)\n"
-"Size of a long long int: %d byte(s)\n"
-"Size of a float: %d byte(s)\n", charLenght, intLenght, longLenght, longlongLenght, floatLenght);
+printf("Size of a char: %d byte(s)\n", charLenght);
+printf("Size of an int: %d byte(s)\n", intLenght);
+printf("Size of a long int: %d byte(s)\n", longLenght);
+printf("Size of a long long int: %d byte(s)\n", longlongLenght);
+printf("Size of a float: %d byte(s)\n", floatLenght);
 
 
 return (0);
