@@ -9,7 +9,7 @@
 */
 int main(void)
 {
-	/*init*/
+	/*init: print order "number11number12" "number21number22", */
 	int number11;
 	int number12;
 	int number21;
@@ -24,7 +24,12 @@ int main(void)
 		{
 			for (number21 = number11; number21 < 58; number21++)
 			{
-				for (number22 = number12 + 1; number22 < 58; number22++)
+				if (number11 == number21)
+					number22 = number12 + 1;
+				else
+					number22 = 48;
+				/*the if statement makes sure that the first and second number differ*/
+				for (; number22 < 58; number22++)
 				{
 					putchar(number11);
 					putchar(number12);
