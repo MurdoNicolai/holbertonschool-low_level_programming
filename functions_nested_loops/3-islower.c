@@ -1,5 +1,5 @@
 /**
- *int _islower - test in caracter is lowercase
+ *_islower - test in caracter is lowercase
  *
  *@c: caracter to test
  *
