@@ -17,5 +17,5 @@ int main(void)
 	for (letter = 65; letter < 91; letter++)
 		putchar(letter);
 	putchar(newline);
-	return (0)
+	return (0);
 }
