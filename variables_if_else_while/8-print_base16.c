@@ -17,4 +17,5 @@ int main(void)
 	for (number = 97; number < 103; number++)
 		putchar(number);
 	putchar(newline);
+	return (0)
 }

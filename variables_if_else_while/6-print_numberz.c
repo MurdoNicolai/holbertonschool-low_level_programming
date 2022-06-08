@@ -3,20 +3,17 @@
 #include <stdio.h>
 
 /**
-*main - prints the alphabet
+*main - prints numbers frome 0 to 9
 *
 *Return: Always 0
 */
 int main(void)
 {
-	int letter;
+	int number;
 	int newline = 10;
 
-	for (letter = 97; letter < 123; letter++)
-	{
-		if (letter != 101 && letter != 113)
-			putchar(letter);
-	}
+	for (number = 48; number < 58; number++)
+		putchar(number);
 	putchar(newline);
 	return (0)
 }
