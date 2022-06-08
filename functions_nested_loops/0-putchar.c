@@ -9,12 +9,11 @@
 
 int main(void)
 {
-	char putchar[] ="_putchar";
-	unsigned c;
+	char putchar[] = "_putchar";
+	unsigned int c;
 
-	for ( c = 0 ;c < strlen(putchar); c++){
+	for (c = 0 ; c < strlen(putchar) ; c++)
 		_putchar(putchar[c]);
-	}
 	_putchar('\n');
 	return (0);
 }
