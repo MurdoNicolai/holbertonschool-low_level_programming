@@ -9,10 +9,10 @@
 int main(void)
 {
 	_putchar();
+	return (0);
 }
 
 void _putchar()
 {
 	printf("_putchar\n");
-	return (0);
 }
