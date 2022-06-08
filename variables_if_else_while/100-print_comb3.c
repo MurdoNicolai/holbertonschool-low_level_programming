@@ -23,7 +23,8 @@ int main(void)
 	for (number1 = 48; number1 < 58; number1++)
 	{
 		minnumber2++;
-		for (number2 = minnumber2; number2 < 58; number2++){
+		for (number2 = minnumber2; number2 < 58; number2++)
+		{
 			putchar(number1);
 			putchar(number2);
 			if (number1 == 56)
