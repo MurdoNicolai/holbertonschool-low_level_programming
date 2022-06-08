@@ -3,6 +3,7 @@
  *
  *Return: void
  */
+#include main.h
 
 void times_table(void)
 {
@@ -21,7 +22,7 @@ void times_table(void)
 			else
 			{
 				_putchar((result - (result % 10)) / 10 + '0');
-				_putchar(result % 10 '0');
+				_putchar((result % 10) + '0');
 				/*for 2 digit numbers we print each diget seperatly*/
 			}
 			if (x < 9)
@@ -34,3 +35,4 @@ void times_table(void)
 				_putchar('\n');
 		}
 	}
+}
