@@ -5,14 +5,16 @@
  */
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 
 int main(void)
 {
-	_putchar();
-	return (0);
-}
+	char putchar[] ="_putchar";
+	int c;
 
-void _putchar()
-{
-	printf("_putchar\n");
+	for ( c = 0 ;c < strlen(putchar); c++){
+		_putchar(putchar[c]);
+	}
+	_putchar('\n');
+	return (0);
 }
