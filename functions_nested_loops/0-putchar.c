@@ -10,7 +10,7 @@
 int main(void)
 {
 	char putchar[] ="_putchar";
-	int c;
+	unsigned c;
 
 	for ( c = 0 ;c < strlen(putchar); c++){
 		_putchar(putchar[c]);
