@@ -19,7 +19,7 @@ void times_table(void)
 			result = x * y;
 			if (result < 10)
 			{
-				if (y != 0)
+				if (x != 0)
 					_putchar(' ');
 				_putchar(result + '0');
 			}
