@@ -17,7 +17,7 @@ void jack_bauer(void)
 
 	for (hour1 = 0; hour1 < 3; hour1++)
 	{
-		for (hour2 = 0; !((hour1 == 2) || (hour2 == 4)) && (hour2 < 10); hour2++)
+		for (hour2 = 0; !((hour1 == 2) && (hour2 == 4)) && (hour2 < 10); hour2++)
 		{
 			for (minute1 = 0; minute1 < 6; minute1++)
 			{
