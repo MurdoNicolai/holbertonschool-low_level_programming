@@ -6,7 +6,7 @@
  *Return: 1=positive, 0=zero, -1=negative
  */
 
-#import "main.h"
+#include "main.h"
 
 int print_sign(int n)
 {
