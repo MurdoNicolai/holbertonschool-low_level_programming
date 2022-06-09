@@ -58,7 +58,8 @@ void print_times_table(int n)
 	int y;
 	/*we are printing result = x time y for tablesize = n*/
 
-
+	if ((n < 0) || (n > 15))
+		return (void);
 	for (y = 0; y <= n; y++)
 	{
 		for (x = 0; x <= n; x++)
