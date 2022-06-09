@@ -16,7 +16,7 @@ int main(void)
 	{
 		fibon = fib + fibon;
 		fib = fibon - fib;
-		printf (", %ld", fibon);
+		printf(", %ld", fibon);
 	}
 	printf("\n");
 	return (0);
