@@ -29,17 +29,17 @@ void printResult(int x, int y)
 		_putchar(' ');
 		charResult = (result - (result % 10)) / 10;
 		_putchar(charResult + '0');
-				result = result - charResult;
-				_putchar(result + '0');
+		result = result - (charResult * 10);
+		_putchar(result + '0');
 	}
 	else
 	{
 		charResult = (result - (result % 100)) / 100;
 		_putchar(charResult + '0');
-		result = result - charResult;
+		result = result - (charResult * 100);
 		charResult = (result - (result % 10)) / 10;
 		_putchar(charResult + '0');
-		result = result - charResult;
+		result = result - (charResult * 10);
 		_putchar(result + '0');
 	}
 }
