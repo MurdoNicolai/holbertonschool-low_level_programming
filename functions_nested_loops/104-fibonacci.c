@@ -17,7 +17,7 @@ int main(void)
 	int carryOver;
 
 	printf("%ld, %ld", fib, fibon);
-	for (n = 2; n < 88 ; n++)/*the first 2 ar already printed*/
+	for (n = 2; n < 90 ; n++)/*the first 2 ar already printed*/
 	{
 		fibon = fib + fibon;
 		fib = fibon - fib;
@@ -28,7 +28,7 @@ int main(void)
 	fibon = fibon - (fibon2 * E15);
 	fib2 = (fib - (fib % E15)) / E15;
 	fib = fib - (fib2 * E15);
-	for (n = 88; n < 98; n++)/*to long to print simply*/
+	for (n = 90; n < 98; n++)/*to long to print simply*/
 	{
 		fibon = fib + fibon;
 		fib = fibon - fib;
