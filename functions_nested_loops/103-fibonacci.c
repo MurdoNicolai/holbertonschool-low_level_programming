@@ -9,7 +9,7 @@ int main(void)
 {
 	long fibon = 2;
 	long fib = 1;
-	long long sum = 0;
+	long sum = 0;
 
 	while (fibon <= 4000000)
 	{
@@ -18,6 +18,6 @@ int main(void)
 		fibon = fib + fibon;
 		fib = fibon - fib;
 	}
-	printf("%lld\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
