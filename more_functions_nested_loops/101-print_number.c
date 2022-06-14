@@ -4,14 +4,17 @@
  *@n: number to print
  *return: void
  */
+
+
 #include "main.h"
-#include <math.h>
+#include <stdio.h>
 
 void print_number(int n)
 {
 	int digit;
 	int power;
 	int dvalue;
+	int p;
 
 	if (n < 0)
 	{
@@ -24,7 +27,9 @@ void print_number(int n)
 	{
 		for (digit = 10; digit >= 0; digit--)
 		{
-			power = pow(10, digit);
+			power = 1;
+			for (p = 0; p < digit; p++)
+				power *= 10;
 			if (n % power != n)
 			{/*example: 2345678 and digit = 3*/
 				dvalue = n - (n % power);/*1234000*/
@@ -34,5 +39,4 @@ void print_number(int n)
 			}
 		}
 	}
-	_putchar('\n');
 }
