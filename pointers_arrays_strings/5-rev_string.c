@@ -14,9 +14,9 @@ void rev_string(char *s)
 {
 	int i;
 	int len = strlen(s);
-	char* str = (char*) malloc(len);
+	char *str = (char *) malloc(len);
 
 	for (i = 0; i < len ; i++)
-		str[len - i -1] = s[i];
+		str[len - i - 1] = s[i];
 	strcpy(s, str);
 }
