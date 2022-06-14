@@ -10,6 +10,7 @@
 void print_number(int n)
 {
 	int digit;
+	int pow;
 	int dvalue;
 
 	if (n < 0)
@@ -23,9 +24,10 @@ void print_number(int n)
 	{
 		for (digit = 10; digit >= 0; digit--)
 		{
-			if (n % pow(10, digit) != n)
+			pow = pow(10, digit);
+			if (n % pow != n)
 			{/*example: 2345678 and digit = 3*/
-				dvalue = n - (n % pow(10, digit));/*1234000*/
+				dvalue = n - (n % pow);/*1234000*/
 				dvalue /= pow(10, digit);/*1234*/
 				dvalue = dvalue % 10;/*4*/
 				_putchar(dvalue + '0');
@@ -33,5 +35,4 @@ void print_number(int n)
 		}
 	}
 	_putchar('\n');
-	return (0);
 }
