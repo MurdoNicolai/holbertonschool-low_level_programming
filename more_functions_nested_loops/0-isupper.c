@@ -11,5 +11,5 @@
 
 int _isupper(int c)
 {
-	return (isupper(c) / 1000);
+	return (isupper(c) / 256);
 }
