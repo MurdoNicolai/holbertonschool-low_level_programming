@@ -12,7 +12,7 @@ void puts2(char *str)
 {
 	int c;
 
-	for (c = 0; c < strlen(s) ; c += 2)
-		printf("%c", s[c]);
+	for (c = 0; c < strlen(str) ; c += 2)
+		printf("%c", str[c]);
 	printf("\n");
 }
