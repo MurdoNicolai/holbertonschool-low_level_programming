@@ -16,5 +16,5 @@ void rev_string(char *s)
 
 	for (i = 0; i < len ; i++)
 		strncat(str, s, len);
-	*s = *str;
+	s = str;
 }
