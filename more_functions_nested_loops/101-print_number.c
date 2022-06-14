@@ -15,12 +15,17 @@ void print_number(int n)
 	int power;
 	int dvalue;
 	int p;
+	int mintest = 0;
 
+	if (n == -2147483648)
+	{
+		n = -214748364;
+		mintest = 1;
+	}
 	if (n < 0)
 	{
 		_putchar('-');
-		n = (n + 1);
-		n *= -1;
+		n = -n;
 	}
 	if (n == 0)
 		_putchar('0');
@@ -39,5 +44,7 @@ void print_number(int n)
 				_putchar(dvalue + '0');
 			}
 		}
+		if (mintest)
+			_putchar('8');
 	}
 }
