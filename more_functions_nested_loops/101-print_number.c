@@ -28,7 +28,7 @@ void print_number(int n)
 			if (n % power != n)
 			{/*example: 2345678 and digit = 3*/
 				dvalue = n - (n % power);/*1234000*/
-				dvalue /= pow(10, digit);/*1234*/
+				dvalue /= power;/*1234*/
 				dvalue = dvalue % 10;/*4*/
 				_putchar(dvalue + '0');
 			}
