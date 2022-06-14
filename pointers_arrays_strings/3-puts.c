@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+
 /**
  *_puts - same as puts
  *
