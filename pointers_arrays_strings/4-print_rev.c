@@ -14,4 +14,5 @@ void print_rev(char *s)
 
 	for (c = strlen(s); c >= 0 ; c--)
 		printf("%c", s[c]);
+	printf("\n");
 }
