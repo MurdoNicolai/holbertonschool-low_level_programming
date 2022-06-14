@@ -7,15 +7,13 @@
 
 int main(void)
 {
-	int n = 2081;
+	long n = 612852475143;
 	int factor;
 
 	while (n > 1)
 	{
-		for (factor = 2; n % factor != 0; factor++)
-		{
-			n /= factor;
-		}
+		for (factor = 2; (n % factor) != 0; factor++);
+		n /= factor;
 	}
 	printf("%d\n", factor);
 	return (0);
