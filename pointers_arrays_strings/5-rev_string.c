@@ -12,7 +12,7 @@ void rev_string(char *s)
 {
 	int i;
 	int len = strlen(s);
-	char str[0];
+	char str[] = "";
 
 	for (i = 0; i < len ; i++)
 		strncat(str, s, len);
