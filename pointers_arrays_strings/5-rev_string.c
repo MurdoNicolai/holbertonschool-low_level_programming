@@ -12,8 +12,8 @@ void rev_string(char *s)
 {
 	int i;
 	int len = strlen(s);
-	char str[];
+	char str[0];
 
 	for (i = 0; i < len ; i++)
-		str[len - i - 1] = s[i];
+		strncat(str, s, len);
 }
