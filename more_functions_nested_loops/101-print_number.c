@@ -19,13 +19,14 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
+		n = (n + 1);
 		n *= -1;
 	}
 	if (n == 0)
 		_putchar('0');
 	else
 	{
-		for (digit = 10; digit >= 0; digit--)
+		for (digit = 9; digit >= 0; digit--)
 		{
 			power = 1;
 			for (p = 0; p < digit; p++)
