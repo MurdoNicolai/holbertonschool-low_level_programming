@@ -10,7 +10,6 @@
 
 int _atoi(char *s)
 {
-	int len = strlen(s);
 	int c = 0;
 	int c2;
 	int i;
@@ -19,7 +18,7 @@ int _atoi(char *s)
 	int integer = 0;
 	int ispositive = 1;
 
-	while (!isdigit(s[c]) || (s[c] != "\0"))
+	while (!isdigit(s[c]) /*|| (s[c] != '\0')*/)
 	{
 		if (s[c] == '-')
 			ispositive--;
