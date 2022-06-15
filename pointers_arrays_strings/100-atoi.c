@@ -37,10 +37,10 @@ int _atoi(char *s)
 		for (i = 1; i < power; i++)
 			add *= 10;
 		power--;
-		integer += add;
+		integer -= add;
 		c++;
 	}
-	if (isnegative % 2 == 1)
+	if (isnegative % 2 == 0)
 		integer *= -1;
 	return (integer);
 }
