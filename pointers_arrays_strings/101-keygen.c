@@ -1,7 +1,7 @@
 /**
  *main - generate password for crackme
  *
- *Return - the key
+ *Return - 0
  */
 #include <string.h>
 #include <stdio.h>
@@ -10,16 +10,15 @@
 
 int main(void)
 {
-	int password = 0, random, checksum;
+	int random, checksum;
 	srand(time(NULL));
 	checksum = 2772;
-	while (checksum > 122)
+	while (checksum > 100)
 	{
-		random = (rand() % 100);
+		random = (rand() % 99) + 1;
 		printf("%c", random);
 		checksum -= random;
-		password++;
 	}
 	printf("%c", checksum);
-	return (password);
+	return (0);
 }
