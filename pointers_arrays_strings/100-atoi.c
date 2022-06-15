@@ -17,14 +17,12 @@ int _atoi(char *s)
 	int power = 0;
 	int add = 0;
 	int integer = 0;
-	int ispositive = 1;
+	int isnegative = 0;
 
 	while (!isdigit(s[c]) && s[c])
 	{
 		if (s[c] == '-')
-			ispositive--;
-		else if (s[c] == '+')
-			ispositive++;
+			isnegative++;
 		c++;
 	}
 	c2 = c;
@@ -42,7 +40,7 @@ int _atoi(char *s)
 		integer += add;
 		c++;
 	}
-	if (ispositive <= 0)
+	if (isnegative % 2 == 1)
 		integer *= -1;
 	return (integer);
 }
