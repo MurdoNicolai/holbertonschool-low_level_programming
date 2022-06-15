@@ -15,6 +15,10 @@ void print_array(int *a, int n)
 	int len = n;
 
 	for (c = 0 ; c < len ; c++)
+	{
 		printf("%d", a[c]);
+		if (c < len -1)
+			printf(", ");
+	}
 	printf("\n");
 }
