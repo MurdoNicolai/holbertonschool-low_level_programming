@@ -13,10 +13,11 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
+	int lensrc = strlen(src);
 	int i;
 	int lendest = strlen(dest);
 
-	for (i = 0; i < n && i < strlen(src); i++)
+	for (i = 0; (i < n) && (i < lensrc); i++)
 	{
 		*(dest + lendest + i) = src[i];
 	}
