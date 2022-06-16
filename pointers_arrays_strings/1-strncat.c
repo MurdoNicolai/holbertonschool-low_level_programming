@@ -1,5 +1,5 @@
 /**
- * *_strcat - appends part of string to another
+ * *_strncat - appends part of string to another
  *
  *@dest: destination
  *@src: string to append
@@ -11,7 +11,7 @@
 #include <string.h>
 
 
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 	int lendest = strlen(dest);
