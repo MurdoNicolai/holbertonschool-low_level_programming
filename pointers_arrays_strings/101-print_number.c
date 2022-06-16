@@ -22,7 +22,7 @@ void print_number(int n)
 	{
 		car = ((n - (n % i)) / i) + 48;
 		n =  n % i;
-		printf("%c", car);
+		_putchar(car);
 		i /= 10;
 	}
 }
