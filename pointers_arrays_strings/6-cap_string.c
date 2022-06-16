@@ -16,9 +16,9 @@ char *cap_string(char *str)
 	int w;
 	int len = strlen(str);
 	int word = 1;
-	int seperator[13] = {9, 10, 20, 21, 22, 40, 41, 44, 46, 59, 63, 123, 125};
+	char seperator[13] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 
-	for (i = 0; i <= len ; i++)
+	for (i = 0; i < len ; i++)
 	{
 		if (str[i] >= 'a' && str[i] <= 'z' && word == 1)
 		{
@@ -26,7 +26,7 @@ char *cap_string(char *str)
 		}
 		word = 0;
 		w = 0;
-		while (word == 0 || w < 13)
+		while (word == 0 && w < 13)
 		{
 			if (str[i] == seperator[w])
 				word = 1;
