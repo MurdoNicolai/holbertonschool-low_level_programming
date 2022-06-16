@@ -24,7 +24,10 @@ char *rot13(char *str)
 		for (w = 0; w < 52; w++)
 		{
 			if (str[i] == alpha[w])
+			{
 				str[i] = bet[w];
+				w = 52;
+			}
 		}
 	}
 	return (str);
