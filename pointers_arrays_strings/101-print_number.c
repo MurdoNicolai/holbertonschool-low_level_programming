@@ -22,7 +22,7 @@ void print_number(int n)
 		if (n < -i)
 		{
 			n++;
-			posit = 1;
+			incr = 1;
 		}
 		n *= -1;
 	}
@@ -37,5 +37,5 @@ void print_number(int n)
 		i /= 10;
 	}
 
-	_putchar(n + '0' + posit);
+	_putchar(n + '0' + incr);
 }
