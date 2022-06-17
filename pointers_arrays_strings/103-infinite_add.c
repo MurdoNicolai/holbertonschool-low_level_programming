@@ -64,7 +64,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			return (0);
 		cr++;
 	}
-	if (over == 1 || size_r > 1)
+	if (over == 1)
 	{
 		r[cr] = 1 + '0';
 		cr++;
