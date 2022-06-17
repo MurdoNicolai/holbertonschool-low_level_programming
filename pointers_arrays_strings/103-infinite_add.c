@@ -40,7 +40,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	i1 = strlen(n1);
 	i2 = strlen(n2);
-	while (i1 > 0 || i2 > 0)
+	while (i1 >= 0 || i2 >= 0)
 	{
 		c1 = n1[i1] - '0';
 		if (i1 < 0)
@@ -69,7 +69,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[cr] = 1 + '0';
 		cr++;
 	}
-	if (size_r <= 1)
+	if (size_r < 1)
 		return (0);
 	r[cr] = '\0';
 	rev_string(r);
