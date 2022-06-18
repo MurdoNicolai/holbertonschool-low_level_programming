@@ -6,6 +6,22 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+
+/**
+ *checkcar - checks if caracter is printable and prints it
+ *
+ *@car: caracter to check
+ *Return: void
+ */
+
+void checkcar(char car)
+{
+	if (car < 20)
+		printf(".");
+	else
+		printf("%c", car);
+}
+
 /**
  *print_hexa - prints hexadecimal valu of int
  *
@@ -54,7 +70,7 @@ void print_buffer(char *b, int size)
 	int i = 0, i2 = 0, c10, bsize = size, tsize;
 	long l;
 
-	if(size == 0)
+	if (size == 0)
 		printf("\n");
 	while (i < size)
 	{
@@ -84,10 +100,7 @@ void print_buffer(char *b, int size)
 		printf(" ");
 		for (c10 = 0; c10 < 10 && bsize > 0; c10++)
 		{
-			if (b[i] < 20)
-				printf(".");
-			else
-				printf("%c", b[i]);
+			checkcar(b[i]);
 			bsize--;
 			i++;
 		}
