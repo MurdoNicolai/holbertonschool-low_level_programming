@@ -7,18 +7,6 @@
 #include <unistd.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- *
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-	}*/
-
-/**
  *print_hexa - prints hexadecimal valu of int
  *
  *@n: int to print
@@ -32,7 +20,7 @@ void print_hexa(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		printf("-");
 		n *= -1;
 	}
 	while (i > n && n > 0)
@@ -44,12 +32,12 @@ void print_hexa(int n)
 		n =  n % i;
 		if (car > 9)
 			car += 39;
-		_putchar(car + '0');
+		printf("%c", car + '0');
 		i /= 10;
 	}
 	if (n > 9)
-			n += 39;
-	_putchar(n + '0');
+		n += 39;
+	printf("%c", n + '0');
 }
 
 
@@ -63,52 +51,44 @@ void print_hexa(int n)
 
 void print_buffer(char *b, int size)
 {
-	int i = 0;
-	int i2 = 0;
+	int i = 0, i2 = 0, c10, bsize = size, tsize;
 	long l;
-	int c10;
-	int bsize = size;
-	int tsize;
-
 
 	while (i < size)
 	{
 		for (l = 4294967296; l > i + 1; l /= 16)
-		{
-			_putchar('0');
-		}
+			printf("0");
 		print_hexa(i);
-	        _putchar(':');
+		printf(":");
 		tsize = bsize;
 		i2 = i;
-		for (c10 = 0; c10 < 10; c10 ++)
+		for (c10 = 0; c10 < 10; c10++)
 		{
-			if(c10 % 2 == 0)
-				_putchar(' ');
-			if(tsize <= 0)
+			if (c10 % 2 == 0)
+				printf(" ");
+			if (tsize <= 0)
 			{
-				_putchar(' ');
-				_putchar(' ');
+				printf("  ");
 			}
 			else
 			{
-				if(b[i2] < 16)
-					_putchar('0');
+				if (b[i2] < 16)
+					printf("0");
 				print_hexa(b[i2]);
 			}
 			tsize--;
 			i2++;
 		}
-		_putchar(' ');
-		for (c10 = 0; c10 < 10 && bsize > 0; c10 ++)
+		printf(" ");
+		for (c10 = 0; c10 < 10 && bsize > 0; c10++)
 		{
-			if(b[i] < 20)
-				_putchar('.');
+			if (b[i] < 20)
+				printf(".");
 			else
-				_putchar(b[i]);
+				printf("%c", b[i]);
 			bsize--;
 			i++;
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 }
