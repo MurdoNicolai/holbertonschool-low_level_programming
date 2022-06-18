@@ -56,7 +56,7 @@ void print_buffer(char *b, int size)
 
 	while (i < size)
 	{
-		for (l = 4294967296; l > i + 1; l /= 16)
+		for (l = 268435456; l > i + 1; l /= 16)
 			printf("0");
 		print_hexa(i);
 		printf(":");
