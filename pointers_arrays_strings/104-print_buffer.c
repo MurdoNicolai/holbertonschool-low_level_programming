@@ -54,6 +54,8 @@ void print_buffer(char *b, int size)
 	int i = 0, i2 = 0, c10, bsize = size, tsize;
 	long l;
 
+	if(size == 0)
+		printf("\n");
 	while (i < size)
 	{
 		for (l = 268435456; l > i + 1; l /= 16)
