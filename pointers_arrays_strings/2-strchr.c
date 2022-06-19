@@ -1,3 +1,6 @@
+#include <stddef.h>
+#include <stdio.h>
+
 /**
  *_strchr - find caracter in string
  *
@@ -13,7 +16,7 @@ char *_strchr(char *s, char c)
 	for (i = 0; s[i] != c; i++)
 	{
 		if (!s[i])
-			return (s[i]);
+			return (NULL);
 	}
 	return (s + i);
 }
