@@ -1,7 +1,7 @@
 #include <stddef.h>
 #include <stdio.h>
 /**
- *_strpbrk - finds first occurance of word in string
+ *_strstr - finds first occurance of word in string
  *
  *@haystack: string to test
  *@needle: word to find
@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 		test = 0;
 		for (i = 0; needle[i] && test != -1; i++)
 		{
-			if (haystack[n + i] == accept[i])
+			if (haystack[n + i] == needle[i])
 				test = 1;
 			else
 				test = -1;
