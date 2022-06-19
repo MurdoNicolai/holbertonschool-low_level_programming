@@ -1,3 +1,5 @@
+#include <stddef.h>
+#include <stdio.h>
 /**
  *_strpbrk - finds any byte of string in another string
  *
@@ -23,5 +25,5 @@ char *_strpbrk(char *s, char *accept)
 		if (test == 1)
 			return (s + n);
 	}
-	return (s + n);
+        return (NULL);
 }
