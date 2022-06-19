@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stddef.h>
 /**
  *print_diagsums - ints both sums of diagonals of square matrix
  *
