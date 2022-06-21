@@ -22,11 +22,14 @@ int compare(char *s1, char *s2, int n1, int n2, int c)
 			return (1);
 		return (0);
 	}
-
 	if (s2[n2] == '*')
 	{
 		return (compare(s1, s2, n1, n2 + 1, 1));
 	}
+
+	if (!(s1[n1]))
+		return (0);
+
 
 	if (s1[n1] != s2[n2])
 	{
@@ -38,7 +41,7 @@ int compare(char *s1, char *s2, int n1, int n2, int c)
 
 	if (c == 1)
 	{
-		if (compare(s1, s2, n1 + 1, n2, 1))
+		if (compare(s1, s2, n1 + 1, n2, 1) == 1)
 			return (1);
 	}
 	return (compare(s1, s2, n1 + 1, n2 + 1, 0));
