@@ -14,11 +14,11 @@
 
 int compare(char *s1, char *s2, int n1, int n2, char c)
 {
-	if (!*(s2[n2]))
+	if (!(s2[n2]))
 	{
 		if (c == '*')
 			return (1);
-		if (!*(s1[n1]))
+		if (!(s1[n1]))
 			return (1);
 		return (0);
 	}
@@ -33,14 +33,14 @@ int compare(char *s1, char *s2, int n1, int n2, char c)
 		if (c == 7)
 			return (0);
 		if (c == '*')
-			return (compare(s1, S2, n1 + 1, n2, '*'));
-		return (compare(s1, S2, n1, n2 + 1, 7));
+			return (compare(s1, s2, n1 + 1, n2, '*'));
+		return (compare(s1, s2, n1, n2 + 1, 7));
 	}
 
 	if (c == 7)
 		return (compare(s1, s2, n1 + 1, n2 + 1, 7));
 	if (c == '*' || c == s1[n1])
-		return (compare(s1, S2, n1 + 1, n2, s2[n2]));
+		return (compare(s1, s2, n1 + 1, n2, s2[n2]));
 }
 
 
@@ -62,5 +62,5 @@ int compare(char *s1, char *s2, int n1, int n2, char c)
 
 int wildcmp(char *s1, char *s2)
 {
-	return (compare(s1, S2, 0, 0, 7));
+	return (compare(s1, s2, 0, 0, 7));
 }
