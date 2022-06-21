@@ -39,8 +39,7 @@ int compare(char *s1, char *s2, int n1, int n2, char c)
 
 	if (c == 7)
 		return (compare(s1, s2, n1 + 1, n2 + 1, 7));
-	if (c == '*' || c == s1[n1])
-		return (compare(s1, s2, n1 + 1, n2, s2[n2]));
+	return (compare(s1, s2, n1 + 1, n2, s2[n2]));
 }
 
 
