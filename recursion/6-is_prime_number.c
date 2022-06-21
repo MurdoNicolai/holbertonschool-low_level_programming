@@ -13,7 +13,7 @@ int prime(int x, int n)
 		return (0);
 	if (n % x == 0)
 		return (1);
-	return (prime(x + 1, n));
+	prime(x + 1, n);
 }
 
 /**
