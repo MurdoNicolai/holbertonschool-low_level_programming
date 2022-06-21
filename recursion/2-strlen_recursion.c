@@ -10,7 +10,7 @@
 int count(char *s, int c)
 {
 	if (*s)
-		return (_strlen_recursion(s + 1, c + 1));
+		return (count(s + 1, c + 1));
 	return (c);
 }
 
