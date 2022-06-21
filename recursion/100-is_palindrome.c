@@ -11,11 +11,11 @@
 
 int palindrome(int x, char *s)
 {
-	if (!*s)
+	if (!*(s + x))
 		return (1);
 	if (*(s + x) == *(s + strlen(s) - x - 1))
-		return (0);
-	return (palindrome(x + 1, s));
+		return (palindrome(x + 1, s));
+	return (0);
 }
 
 /**
