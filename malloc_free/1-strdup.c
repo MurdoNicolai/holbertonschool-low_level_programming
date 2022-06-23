@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 /**
  *_strdup - initialises an aray of char with copy of given string
  *
