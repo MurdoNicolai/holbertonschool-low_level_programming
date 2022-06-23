@@ -16,8 +16,10 @@ char *_strdup(char *str)
 	unsigned int size = strlen(str) + 1;
 	unsigned int i;
 
+	if (!str)
+		return (NULL);
 	array = (char *) malloc(size * sizeof(char));
-	if (!str || !(array))
+	if (!array)
 		return (NULL);
 	for (i = 0; i < size; i++)
 		array[i] = str[i];
