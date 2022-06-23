@@ -30,8 +30,12 @@ char *str_concat(char *s1, char *s2)
 	if (!array)
 		return (NULL);
 	for (i = 0; i <= size1 + size2; i++)
-		if (i != size1)
-			array[i] = str[i];
+	{
+		if (i < size1)
+			array[i] = s1[i];
+		else if (i < size1 + size2)
+			array[i] = s2[i - size1];
+	}
 	array[i + 1] = 0;
 	return (array);
 }
