@@ -4,14 +4,14 @@
 #include <stdio.h>
 
 /**
- *free_grid - free a 2d grid
+ *free_grid2 - free a 2d grid
  *
  *@grid: grid to free
  *@height: height of grid
  *Return: void
  */
 
-void free_grid(int **grid, int height)
+void free_grid2(int **grid, int height)
 {
 	int i;
 
@@ -51,7 +51,7 @@ int **alloc_grid(int width, int height)
 		array[i] = (int *) malloc((width) * sizeof(int));
 		if (!array[i])
 		{
-			free_grid(array, i + 1);
+			free_grid2(array, i + 1);
 			return (NULL);
 		}
 	}
