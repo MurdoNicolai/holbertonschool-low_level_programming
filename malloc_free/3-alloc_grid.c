@@ -4,6 +4,25 @@
 #include <stdio.h>
 
 /**
+ *free_grid - free a 2d grid
+ *
+ *@grid: grid to free
+ *@height: height of grid
+ *Return: void
+ */
+
+void free_grid(int **grid, int height)
+{
+	int i;
+
+	for (i = 0; i < height; i++)
+	{
+		free(grid[i]);
+	}
+	free(grid);
+}
+
+/**
  *alloc_grid - creates a 2 dimentional array with zeros
  *
  *@width: length of 1 dimentional array
@@ -32,7 +51,7 @@ int **alloc_grid(int width, int height)
 		array[i] = (int *) malloc((width) * sizeof(int));
 		if (!array[i])
 		{
-			free(array[i]);
+			free_grid(array, i + 1);
 			return (NULL);
 		}
 	}
@@ -45,5 +64,10 @@ int **alloc_grid(int width, int height)
 		}
 	}
 
+	if (!array)
+	{
+		free(array);
+		return (NULL);
+	}
 	return (array);
 }
