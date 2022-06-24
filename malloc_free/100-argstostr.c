@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		size += strlen(av[i]) + 1;
-		array = (char *) realloc(array, size * sizeof(char));
+		array = (char *) realloc(array, (size) * sizeof(char));
 		if (!array)
 			return (NULL);
 		for (j = 0; j <= strlen(av[i]); j++)
@@ -36,7 +36,7 @@ char *argstostr(int ac, char **av)
 				array[size - 1] = 10;
 		}
 	}
-	array = (char *) realloc(array, (size + 1) * sizeof(char));
+	array = (char *) realloc(array, (size - i) * sizeof(char));
 	array[size] = 0;
 	return (array);
 }
