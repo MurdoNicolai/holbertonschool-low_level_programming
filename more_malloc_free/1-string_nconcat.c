@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
+#include <stdio.h>
+
 /**
  *string_nconcat - initialises an aray of char with 2 strings
  *
@@ -29,16 +31,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		size2 = 0;
 	if (n < size2)
 		size2 = n;
-	array = (char *) malloc((size1 + size2 + 1) * sizeof(char));
+	array = calloc(size1 + size2 + 1, sizeof(*s1));
 	if (!array)
 		return (NULL);
-	for (i = 0; i <= size1 + size2; i++)
+	for (i = 0; i < size1 + size2; i++)
 	{
 		if (i < size1)
 			array[i] = s1[i];
-		else if (i < size1 + size2)
+		else
 			array[i] = s2[i - size1];
 	}
-	array[i + 1] = 0;
+	array[size1 + size2] = 0;
 	return (array);
 }
