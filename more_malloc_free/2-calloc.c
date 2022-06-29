@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  *_calloc - same as calloc: alocates memory and intialises it to 0
  *@nmemb: number of ellements
@@ -8,7 +9,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *res;
-	int i;
+	unsigned int i;
 
 	res = malloc(nmemb * size);
 	if (!res)
