@@ -1,3 +1,4 @@
+#include <stdlib.h>
 
 /**
  *malloc_checked - malloc but emmidiatly verifies if it worked
@@ -14,7 +15,7 @@ void *malloc_checked(unsigned int b)
 
 	if (!res)
 	{
-		exit (98);
+		exit(98);
 	}
 	return (res);
 }
