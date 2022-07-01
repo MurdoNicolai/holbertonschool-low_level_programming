@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 {
 	int arg1;
 	int arg2;
-	char* op;
+	char *op;
 	long int result;
 
 	if (argc != 4)
@@ -35,5 +35,5 @@ int main(int argc, char *argv[])
 	}
 	result = get_op_func(op)(arg1, arg2);
 	printf("%ld\n", result);
-	return(0);
+	return (0);
 }
