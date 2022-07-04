@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 		{
 			toprint = "%";
 			strncat(toprint, &form, 1);
-			if (form == "s")
+			if (&form == "s")
 				printf("(nil)");
 			else
 				printf(toprint, va_arg(ap, char*));
