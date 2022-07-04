@@ -16,16 +16,16 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	unsigned int i;
 	char *toprint;
-	char *form;
+	char form;
 
 	va_start(ap, format);
 	for (i = 0; i < strlen(format); i++)
 	{
 		form = format[i];
-		if (strchr("cifs", *form))
+		if (strchr("cifs", form))
 		{
 			toprint = "%";
-			strncat(toprint, form, 1);
+			strncat(toprint, &form, 1);
 			if (form == "s")
 				printf("(nil)");
 			else
@@ -34,3 +34,4 @@ void print_all(const char * const format, ...)
 	}
 	va_end(ap);
 	putchar('\n');
+}
