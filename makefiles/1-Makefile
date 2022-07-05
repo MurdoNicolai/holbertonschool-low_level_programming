@@ -1,6 +1,16 @@
-.PHONY: all
-CC = gcc
-SRC := main.c school.c
+# Usage:
+# make	# compile all binary
+# make clean  # remove ALL binaries and objects
 
-all:
-	${CC} ${SRC} -o school
+.PHONY = all
+
+CC = gcc			# compiler to use
+
+LINKERFLAG =
+
+SRC := school.c
+
+all: ${SRC}
+
+%: %
+	${CC} ${LINKERFLAG} main.c $< -o school
