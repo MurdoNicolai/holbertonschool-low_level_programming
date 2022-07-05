@@ -48,7 +48,6 @@ void print_all(const char * const format, ...)
 				j = 0;
 				break;
 			}
-			printf("  ,%d,  ",form);
 			getvalu(form % 2);
 			j = 0;
 			toprint[0] = ',';
