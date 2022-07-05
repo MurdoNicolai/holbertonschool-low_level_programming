@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+
+
+int main(void)
+{
+  int nb = 20;
+  char* try = "d";
+
+  printf("Hello World !\n");
+  printf("%"try"\n", nb);
+  return (0);
+}

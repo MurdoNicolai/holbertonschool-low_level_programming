@@ -16,13 +16,15 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	unsigned int i;
-	char toprint[3];
+	char toprint[5];
 	char form;
 	int j;
 	char *word;
 
 
 	va_start(ap, format);
+	toprint[0] = 7;
+	toprint[1] = 7;
 	i = 0;
 	while (i < strlen(format))
 	{
@@ -31,15 +33,14 @@ void print_all(const char * const format, ...)
 		while (strchr("cifs", form) && j)
 /* doing if statement using a while*/
 		{
-			toprint[0] = '%';
-		        toprint[1] = form;
-			if (form == 115)
+			toprint[2] = '%';
+		        toprint[3] = form;
+			if (form == 's')
 			{
 				word = va_arg(ap, char*);
 				if (word == NULL)
 				{
 					printf("(nil)");
-					printf("here2\n");
 					j = 0;
 					break;
 				}
@@ -47,8 +48,10 @@ void print_all(const char * const format, ...)
 				j = 0;
 				break;
 			}
-			printf(toprint, va_arg(ap, int));
+			printf(toprint, getvalu(form));
 			j = 0;
+			toprint[0] = ',';
+		        toprint[1] = ' ';
 		}
 		i++;
 	}
