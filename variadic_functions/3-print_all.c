@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 	int l = 0, j;
 	char *word;
 
-	start(format == NULL);
+	start(format != NULL);
 	i = 0;
 	while (format != NULL && i < strlen(format))
 	{
