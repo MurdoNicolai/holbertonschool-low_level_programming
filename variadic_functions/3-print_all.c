@@ -21,9 +21,9 @@ void print_all(const char * const format, ...)
 	char *word;
 
 
-	va_start(ap, format);
+	start(format != NULL);
 	i = 0;
-	while (i < strlen(format) && format)
+	while (i < strlen(format) && format != NULL)
 	{
 		form = format[i];
 		j = 1;
