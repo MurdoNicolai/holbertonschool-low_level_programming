@@ -20,10 +20,9 @@ void print_all(const char * const format, ...)
 	int l = 0, j;
 	char *word;
 
-
-	start(format != NULL);
+	start(format == NULL);
 	i = 0;
-	while (i < strlen(format) && format != NULL)
+	while (format != NULL && i < strlen(format))
 	{
 		form = format[i];
 		j = 1;
