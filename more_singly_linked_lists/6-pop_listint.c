@@ -1,6 +1,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  *pop_listintn - delete head
@@ -18,6 +19,6 @@ int pop_listint(listint_t **head)
 		return (0);
 	tmp = *head;
 	*head = *head->next;
-	free tmp;
+	free(tmp);
 	return (r);
 }
