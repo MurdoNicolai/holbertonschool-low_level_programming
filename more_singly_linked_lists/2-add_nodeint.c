@@ -11,7 +11,7 @@
  */
 
 
-listint_t *add_nodeint(listint_t **head, const char *str)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *newNode = malloc(sizeof(list_t));
 
@@ -19,8 +19,7 @@ listint_t *add_nodeint(listint_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	newNode->str = strdup(str);
-	newNode->len = strlen(str);
+	newNode->n = n;
 	newNode->next = *head;
 	*head = newNode;
 	return (newNode);
