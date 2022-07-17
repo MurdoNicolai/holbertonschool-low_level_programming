@@ -3,30 +3,29 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *add_node_end - adds a node
+ *add_nodeint_end - adds a node
  *
  *@head: head of list
- *@str: string to add in node
+ *@n: int to add in node
  *Return: list lenght
  */
 
 
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *newNode = malloc(sizeof(list_t));
+	listint_t *newNode = malloc(sizeof(listint_t));
 
 	if (newNode == NULL)
 	{
 		return (NULL);
 	}
-	newNode->str = strdup(str);
-	newNode->len = strlen(str);
+	newNode->n = n;
 	newNode->next = NULL;
 	if (*head == NULL)
 		*head = newNode;
 	else
 	{
-		list_t *lastNode = *head;
+		listint_t *lastNode = *head;
 
 		while (lastNode->next != NULL)
 		{

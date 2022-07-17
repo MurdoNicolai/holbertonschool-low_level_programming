@@ -6,7 +6,7 @@
  *add_nodeint - adds a node
  *
  *@head: head of list
- *@str: string to add in node
+ *@n: int to add in node
  *Return: list lenght
  */
 
