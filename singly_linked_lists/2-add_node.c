@@ -26,7 +26,7 @@ list_t *add_node(list_t **head, const char *str)
 		 *head = newNode;
 	else
 	{
-		struct node *lastNode = *head;
+		list_t *lastNode = *head;
 		while(lastNode->next != NULL)
 		{
 			lastNode = lastNode->next;
