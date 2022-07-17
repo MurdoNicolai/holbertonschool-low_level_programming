@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- *pop_listintn - delete head
+ *pop_listint - delete head
  *
  *@head: headlist delete
  *Return: value
@@ -15,7 +15,7 @@ int pop_listint(listint_t **head)
 	int r;
 	listint_t *tmp;
 
-	if (!head)
+	if (!head || !(*head))
 		return (0);
 	tmp = *head;
 	*head = tmp->next;
