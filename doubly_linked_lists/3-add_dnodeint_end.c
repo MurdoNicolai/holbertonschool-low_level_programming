@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * add_dnodeint_end - add node at the end 
- * 
+ * add_dnodeint_end - add node at the end
+ *
  *@head: head of list
  *@n num to add in node
- */
+*/
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
