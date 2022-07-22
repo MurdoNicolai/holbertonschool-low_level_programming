@@ -8,7 +8,8 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	return (((1 << index) && n) > 0);
+	n = (1 << index) & n;
+	return (n > 0);
 }
 
 
@@ -24,7 +25,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	int i;
 	int res = 0;
 
-	for (i = 0; i < 64; i++)
+	for (i = 0; i < 32; i++)
 	{
 		if (get_bit(n ^ m, i))
 			res++;
