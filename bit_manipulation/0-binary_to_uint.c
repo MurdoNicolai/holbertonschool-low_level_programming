@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 	int pow2 = 1;
 	unsigned int i;
 
-	if (!b)
+	if (strlen(b) == 0 || !b)
 		return (0);
 	for (i = strlen(b) - 1; i > 0; i--)
 	{
