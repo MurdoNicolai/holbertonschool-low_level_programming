@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define _POSIX_SOURCE
 #include <fcntl.h>
 
 
@@ -13,7 +12,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	FILE *new = creat(filename);
+	FILE *new = creat(filename, 0600);
 
 	if (!filename || !new)
 		return (-1);
