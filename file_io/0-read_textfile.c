@@ -1,5 +1,6 @@
 
 #include<stdio.h>
+#include <unistd.h>
 
 /**
  * read_textfile - reads a text file and posts it to standard output
@@ -18,10 +19,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename || !in)
 		return (0);
-	while (c != EOF)
+	while (c != EOF && letters > 0)
 	{
 		c = fgetc(in);
-		count =	write(1, c, 1);
+		count += write(1, c, 1);
+		letters--;
 	}
 	fclose(in);
 	return (count);
