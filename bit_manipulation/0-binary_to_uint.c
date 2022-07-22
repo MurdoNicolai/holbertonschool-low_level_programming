@@ -14,9 +14,11 @@ unsigned int binary_to_uint(const char *b)
 	int pow2 = 1;
 	unsigned int i;
 
-	for (i = strlen(b); i > 0; i--)
+	if (!b)
+		return (0);
+	for (i = strlen(b) - 1; i > 0; i--)
 	{
-		if (b[i] != 0 && b[i] != 1)
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 		res += (b[i] - '0') * pow2;
 		pow2 *= 2;
