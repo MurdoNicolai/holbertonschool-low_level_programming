@@ -4,13 +4,13 @@
 #include "lists.h"
 
 /**
- *print_dlistint_t - prints a list
+ *print_dlistint - prints a list
  *
  *@h: list to print
  *Return: amount of nodes printed
  */
 
-size_t print_dlistint_t(const dlistint_t *h)
+size_t print_dlistint(const dlistint_t *h)
 {
 	size_t count = 0;
 
