@@ -6,7 +6,8 @@
  * add_dnodeint_end - add node at the end
  *
  *@head: head of list
- *@n num to add in node
+ *@n: num to add in node
+ *Return: len
 */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
