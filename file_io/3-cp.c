@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
-	too = fopen(argv[2], "w");
-	frome = fopen(argv[1], "r");
-	if (!frome)
+	too = fopen(argv[2], "+w");
+	frome = fopen(argv[1], "+r");
+	if (frome == NULL)
 	{
 		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
