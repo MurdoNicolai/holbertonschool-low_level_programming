@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	}
 	too = fopen(argv[2], "+w");
 	frome = fopen(argv[1], "+r");
-	if (frome == NULL)
+	if (!frome)
 	{
 		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
