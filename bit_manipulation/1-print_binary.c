@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 		n = (n & (0xffffffff >> (32 - i)));
 	for (; i >= 0; i--)
 	{
-		_putchar((n >> i) + '0');
+		putchar((n >> i) + '0');
 		n = (n & (0xffffffff >> (32 - i)));
 	}
 }
