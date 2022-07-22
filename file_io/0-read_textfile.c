@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename || !in)
 		return (0);
-	c = = fgetc(in);
+	c = fgetc(in);
 	while (c != EOF && letters > 0)
 	{
 		count += write(STDOUT_FILENO, &c, 1);
