@@ -13,10 +13,12 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int keyID = key_index((unsigned char *)key, ht->size);
+	unsigned long int keyID;
 	hash_node_t *new;
-	hash_node_t *tmp;
 
+	if (!ht)
+		return (0);
+	keyID = key_index((unsigned char *)key, ht->size);
 	if (!ht->array[keyID])
 	{
 		new  = malloc(sizeof(hash_node_t));
@@ -30,14 +32,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[keyID] = new;
 		return (1);
 	}
-	for (tmp = ht->array[keyID]; tmp; tmp = tmp->next)
+	for (new = ht->array[keyID]; new; new = new->next)
 	{
-		if (strcmp(tmp->key, key) == 0)
+		if (strcmp(new->key, key) == 0)
 		{
-			tmp->value = realloc(tmp->value, sizeof((char *) value));
-			if (!(tmp->value))
+			new->value = realloc(new->value, sizeof((char *) value));
+			if (!(new->value))
 				return (0);
-			strcpy(tmp->value, (char *)value);
+			strcpy(new->value, (char *)value);
 			return (1);
 		}
 	}
