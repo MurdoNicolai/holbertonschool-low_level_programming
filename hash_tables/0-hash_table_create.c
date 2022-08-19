@@ -12,7 +12,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new = malloc(sizeof(hash_table_t));
-	hash_node_t **Narray = malloc(sizeof(hash_node_t *) * size);
+	hash_node_t **Narray = calloc(size, sizeof(hash_node_t *));
 
 	if (!new || !Narray)
 		return (NULL);
