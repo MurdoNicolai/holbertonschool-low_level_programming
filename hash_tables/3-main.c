@@ -36,6 +36,7 @@ int main(void)
 	hash_table_t *ht;
 	int ret;
 
+	hash_table_set(NULL, "Holberton", "is cool");
 	ht = hash_table_create(10);
 	ret = hash_table_set(ht, "Holberton", "is cool");
 	printf("%d\n", ret);
