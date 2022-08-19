@@ -18,8 +18,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!new)
 		return (0);
-	new->value = (char *)value;
-	new->key = (char *)key;
+	new->value = malloc(sizeof((char *)value));
+	strcpy(new->value,(char *)value);
+	new->key = malloc(sizeof((char *)key));
+	strcpy(new->key,(char *)key);
 	if (!ht->array[keyID])
 	{
 		new->next = NULL;
