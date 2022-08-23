@@ -47,7 +47,7 @@ int binary_search(int *array, size_t size, int value)
 		ret = binary_search(array + i + 1, i - (size % 2) + 1, value);
 		if (ret == -1)
 			return (-1);
-		return (ret + i);
+		return (ret + i + 1);
 	}
 	return (i);
 }
