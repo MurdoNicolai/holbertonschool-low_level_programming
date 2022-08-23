@@ -33,7 +33,7 @@ void print_array(const int *array, size_t size)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	unsigned int i = (size - (size % 2)) / 2;
+	unsigned int i = ((size + (size % 2)) / 2) - 1;
 	int ret = 0;
 
 	if (!size || !array)
@@ -41,10 +41,10 @@ int binary_search(int *array, size_t size, int value)
 	printf("Searching in array: ");
 	print_array(array, size);
 	if (array[i] > value)
-		return (binary_search(array, i - 1, value));
+		return (binary_search(array, i, value));
 	if (array[i] < value)
 	{
-		ret = binary_search(array + i + (size % 2), i, value);
+		ret = binary_search(array + i + 1, i - (size % 2) + 1, value);
 		if (ret == -1)
 			return (-1);
 		return (ret + i);
