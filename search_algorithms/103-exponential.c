@@ -60,7 +60,7 @@ int binary_search(int *array, size_t size, int value)
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	unsigned int i;
+	unsigned long int i;
 	int res;
 
 	if (!size || !array)
@@ -69,11 +69,11 @@ int exponential_search(int *array, size_t size, int value)
 	{
 		if (array[i] >= value)
 			break;
-		printf("Value checked array[%d] = [%d]\n", i, array[i]);
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 	}
 	i = i >> 1;
 	printf("Value found between indexes");
-	printf(" [%d] and [%ld]\n", i, MIN(i << 1, size - 1));
+	printf(" [%ld] and [%ld]\n", i, MIN(i << 1, size - 1));
 	res = binary_search(array + i, MIN(i, size << 1), value);
 	if (res != -1)
 		res += i;
