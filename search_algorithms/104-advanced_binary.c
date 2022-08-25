@@ -43,8 +43,8 @@ int advanced_binary(int *array, size_t size, int value)
 	if (array[i] == value && array[i - 1] < value)
 		return (i);
 	if (array[i] >= value)
-		return (binary_search(array, i, value));
-	ret = binary_search(array + i + 1, i - (size % 2) + 1, value);
+		return (advanced_binary(array, i, value));
+	ret = advanced_binary(array + i + 1, i - (size % 2) + 1, value);
 	if (ret == -1)
 		return (-1);
 	return (ret + i + 1);
