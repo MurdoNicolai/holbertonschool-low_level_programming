@@ -43,5 +43,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value);
 skiplist_t *linear_skip(skiplist_t *list, int value);
 
 #define MIN(x,y) (((x) <= (y)) ? (x) : (y))
+#define MAX(x,y) (((x) < (y)) ? (y) : (x))
 
 #endif
