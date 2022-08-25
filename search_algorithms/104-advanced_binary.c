@@ -40,7 +40,7 @@ int advanced_binary(int *array, size_t size, int value)
 		return (-1);
 	printf("Searching in array: ");
 	print_array(array, size);
-	if (array[i] == value && array[i - 1] < i)
+	if (array[i] == value && array[i - 1] < value)
 		return (i);
 	if (array[i] >= value)
 		return (binary_search(array, i, value));
