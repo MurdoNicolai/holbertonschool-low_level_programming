@@ -17,7 +17,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	int i;
 	listint_t *tmp = list;
 
-	if(!list || !size)
+	if (!list || !size)
 		return (NULL);
 	while (list)
 	{
