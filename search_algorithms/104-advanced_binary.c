@@ -38,12 +38,12 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (!size || !array)
 		return (-1);
+	if (array[i] == value && (array[MAX(0, (int)(i - 1))] < value || size == 1))
+		return (i);
 	printf("Searching in array: ");
 	print_array(array, size);
-	if (array[i] == value && array[i - 1] < value)
-		return (i);
 	if (array[i] >= value)
-		return (advanced_binary(array, i, value));
+		return (advanced_binary(array, i + 1, value));
 	ret = advanced_binary(array + i + 1, i - (size % 2) + 1, value);
 	if (ret == -1)
 		return (-1);
